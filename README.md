@@ -14,6 +14,12 @@ hhttp://railstutorial.ru/chapters/4_0/updating-showing-and-deleting-users#top
 
 * Deployment from http://railstutorial.ru/chapters/4_0/a-demo-app#top
 
+- default admin user is "admin@railstutorial.org" with password: "foobar"
+      to change - look at lib/tasks/sample_data.rake
+      need to reset db -> rake db:reset
+      and do ->           rake db:populate  for gem 'faker' to fill a db with data
+
+- find a admin user at rails console -> User.where(:admin => true)
 
 - do rake assets:precompile for working styles
 - heroku run rake db:migrate --app
@@ -21,4 +27,3 @@ hhttp://railstutorial.ru/chapters/4_0/updating-showing-and-deleting-users#top
 
 App at production -
 
-Chapter
