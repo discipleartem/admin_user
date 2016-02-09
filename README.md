@@ -21,9 +21,14 @@ hhttp://railstutorial.ru/chapters/4_0/updating-showing-and-deleting-users#top
 
 - find a admin user at rails console -> User.where(:admin => true)
 
-- do rake assets:precompile for working styles
-- heroku run rake db:migrate --app
+- do ->   rake assets:precompile    for working styles
+          git add .
+          git commit -am 'deploy heroku'
+
+- git push heroku master
+- heroku run rake db:migrate --app morning-earth-94712
+- heroku run rake db:populate --app morning-earth-94712   --> fill db
 
 
-App at production -
+App at production - https://morning-earth-94712.herokuapp.com
 
